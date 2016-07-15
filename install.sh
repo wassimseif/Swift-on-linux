@@ -20,7 +20,7 @@
   openssh-client \
   wget \
   && rm -rf /var/lib/apt/lists/*
-  export PATH=/root/swift-DEVELOPMENT-SNAPSHOT-2016-06-06-a-ubuntu15.10/usr/bin:$PATH
+
 
   wget -nv https://swift.org/builds/development/ubuntu1510/swift-DEVELOPMENT-SNAPSHOT-2016-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2016-06-06-a-ubuntu15.10.tar.gz \
   && tar xzvf swift-DEVELOPMENT-SNAPSHOT-2016-06-06-a-ubuntu15.10.tar.gz \
