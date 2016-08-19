@@ -36,7 +36,7 @@ wget https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-
   && tar xzvf swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz \
   && rm swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz
 
-export PATH $/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr/bin:$PATH
+export PATH=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr/bin:$PATH
 
 swiftc -h
 
