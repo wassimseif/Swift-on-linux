@@ -49,6 +49,6 @@ rm /usr/bin/ld && ln -s /usr/bin/ld.gold /usr/bin/ld
   && git submodule init \
   && git submodule update \
   && sh ./autogen.sh \
-  && CFLAGS=-fuse-ld=gold ./configure --with-swift-toolchain=$/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr --prefix=$/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr \
+  && CFLAGS=-fuse-ld=gold ./configure --with-swift-toolchain=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr --prefix=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr \
   && make \
   && make install
