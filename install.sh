@@ -29,7 +29,6 @@ sudo apt-get update && apt-get install -y \
 
 
 
-echo "set -o vi" >> /root/.bashrc
 
 # Install Swift compiler
 wget https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz \
@@ -37,6 +36,8 @@ wget https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-
   && rm swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz
 
 export PATH=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr/bin:$PATH
+
+echo "export PATH=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr/bin:$PATH" >> /root/.bashrc
 
 swiftc -h
 
