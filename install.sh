@@ -31,13 +31,13 @@ sudo apt-get update && apt-get install -y \
 
 
 # Install Swift compiler
-wget https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz \
-  && tar xzvf swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz \
-  && rm swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04.tar.gz
+wget https://swift.org/builds/swift-3.0-release/ubuntu1404/swift-3.0-RELEASE/swift-3.0-RELEASE-ubuntu14.04.tar.gz \
+  && tar xzvf swift-3.0-RELEASE-ubuntu14.04.tar.gz \
+  && rm swift-3.0-RELEASE-ubuntu14.04.tar.gz
 
-export PATH=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr/bin:$PATH
+export PATH=/root/swift-3.0-RELEASE-ubuntu14.04/usr/bin:$PATH
 
-echo "export PATH=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr/bin:$PATH" >> /root/.bashrc
+echo "export PATH=/root/swift-3.0-RELEASE-ubuntu14.04/usr/bin:$PATH" >> /root/.bashrc
 
 swiftc -h
 
@@ -50,6 +50,6 @@ rm /usr/bin/ld && ln -s /usr/bin/ld.gold /usr/bin/ld
   && git submodule init \
   && git submodule update \
   && sh ./autogen.sh \
-  && CFLAGS=-fuse-ld=gold ./configure --with-swift-toolchain=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr --prefix=/root/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a-ubuntu14.04/usr \
+  && CFLAGS=-fuse-ld=gold ./configure --with-swift-toolchain=/root/swift-3.0-RELEASE-ubuntu14.04/usr --prefix=/root/swift-3.0-RELEASE-ubuntu14.04/usr \
   && make \
   && make install
