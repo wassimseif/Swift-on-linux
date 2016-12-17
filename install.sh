@@ -67,3 +67,8 @@ git clone  https://github.com/apple/swift-corelibs-libdispatch.git \
  && ./configure \
  && make \
  && make install
+
+
+printer "Refreshing Shell"
+bash
+printer "Done"
