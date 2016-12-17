@@ -23,6 +23,7 @@ sudo apt-get update && apt-get install -y \
   vim \
   wget \
   binutils-gold \
+  binutils \
   libcurl4-openssl-dev \
   openssl \
   libssl-dev
@@ -45,11 +46,11 @@ swiftc -h
 rm /usr/bin/ld && ln -s /usr/bin/ld.gold /usr/bin/ld
 
 # Clone and install swift-corelibs-libdispatch
- git clone -b experimental/foundation https://github.com/apple/swift-corelibs-libdispatch.git \
-  && cd swift-corelibs-libdispatch \
-  && git submodule init \
-  && git submodule update \
-  && sh ./autogen.sh \
-  && CFLAGS=-fuse-ld=gold ./configure --with-swift-toolchain=/root/swift-3.0-RELEASE-ubuntu14.04/usr --prefix=/root/swift-3.0-RELEASE-ubuntu14.04/usr \
-  && make \
-  && make install
+# git clone  https://github.com/apple/swift-corelibs-libdispatch.git \
+#  && cd swift-corelibs-libdispatch \
+#  && git submodule init \
+#  && git submodule update \
+#  && sh ./autogen.sh \
+#  && ./configure \
+#  && make \
+#  && make install
